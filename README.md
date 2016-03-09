@@ -1,3 +1,42 @@
+# Setup
+
+Clone the repository using
+
+```
+$ git clone 
+```
+
+navigate to the directory
+
+```
+$ cd expense-tracker
+```
+
+run npm install
+
+```
+$ npm install
+```
+
+to serve to the browser for development
+
+```
+$ ionic serve
+```
+
+to build for device
+
+```
+$ ionic run android
+```
+```
+$ ionic run ios
+```
+
+****
+
+# How to start a new ionic project
+
 ## 1. Generate the project structure
 ```
 $ ionic start imeAppa sidemenu
