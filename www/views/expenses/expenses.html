@@ -16,7 +16,7 @@
         </label>
         
         <h4>Total expenses: {{getSum()}}</h4>
-        <a class="item" href="#" ng-repeat="expense in expenses | orderBy:sortBy:order">
+        <a class="item" href="#" ng-repeat="expense in expenses | orderBy:sortBy:order" ng-click="expenseAction(expense)">
           {{expense.amount}} €
           <span class="item-note">
             {{expense.category}} / {{expense.date | date:'dd/MM/yyyy hh:mm:ss'}}
