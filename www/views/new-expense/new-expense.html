@@ -1,7 +1,43 @@
 <ion-view view-title="New expense">
-    <ion-content>
+    <ion-content class="text-center">
         
-        <h1>New expense</h1>
+        <br/>
+        <h3>Add new expense</h3>
+        <br/>
+        
+        <label class="item item-input">
+            <span class="input-label">Amount</span>
+            <input type="number" ng-model="expense.amount" placeholder="Vrednost">
+        </label>
+
+        <label class="item item-input item-select">
+            <div class="input-label">
+                Category
+            </div>
+            <select ng-model="expense.category">
+                <option value="{{category}}" ng-repeat="category in categories">
+                    {{category}}
+                </option>
+            </select>
+        </label>
+   
+
+        <label class="item item-input">
+            <textarea placeholder="Description" ng-model="expense.description"></textarea>
+        </label>
+        
+        <br/>
+        <div ng-click="addExpense()" class="button button-block button-calm">
+            Add expense
+        </div>
         
     </ion-content>
 </ion-view>
+
+
+
+
+
+
+
+

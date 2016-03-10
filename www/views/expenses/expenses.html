@@ -1,7 +1,28 @@
 <ion-view view-title="Expenses">
-    <ion-content>
+    <ion-content class="padding">
         
         <h1>Expenses</h1>
+        <div class="button button-xs" ng-click="toggleOrder()">Change order : {{order?'desc':'asc'}}</div>
+        
+        <label class="item item-input item-select">
+            <div class="input-label">
+                Order by
+            </div>
+            <select ng-model="sortBy">
+                <option value="date">Date</option>
+                <option value="amount">Amount</option>
+                <option value="category">Category</option>
+            </select>
+        </label>
+        
+        <h4>Total expenses: {{getSum()}}</h4>
+        <a class="item" href="#" ng-repeat="expense in expenses | orderBy:sortBy:order">
+          {{expense.amount}} €
+          <span class="item-note">
+            {{expense.category}} / {{expense.date | date:'dd/MM/yyyy hh:mm:ss'}}
+          </span>
+            <p>{{expense.description}}</p>
+        </a>
         
     </ion-content>
 </ion-view>
